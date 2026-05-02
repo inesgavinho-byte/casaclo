@@ -1,0 +1,37 @@
+# Configuração Netlify para Casa Clo
+# Como é um site estático puro (HTML + CSS + JS), não precisa de build step.
+
+[build]
+  publish = "."
+
+# Cabeçalhos de cache para imagens (nunca mudam — cache longo)
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# CSS e JS: cache curto + revalidação
+# (pode mudar com frequência, queremos que o browser verifique sempre)
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# HTML: igual ao CSS/JS — cache curto
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Cabeçalhos de segurança básicos
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
