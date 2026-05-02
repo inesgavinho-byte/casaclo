@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eventos e mesas doces — Casa Clo</title>
+  <meta name="description" content="Mesas doces para casamentos, baptizados, comunhões, aniversários e festas privadas. Doces feitos à medida da ocasião, em Lisboa e Margem Sul.">
+
+  <meta property="og:title" content="Eventos e mesas doces — Casa Clo">
+  <meta property="og:description" content="Doçaria à medida da ocasião — em Lisboa e Margem Sul.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/img-10.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=Italiana&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Estilos específicos para esta página (cards de tipos, processo numerado em coluna) */
+    .types-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+    .type-card {
+      background: var(--paper);
+      padding: 22px 20px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(42, 24, 19, 0.06);
+    }
+    .type-card h3 {
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 500;
+      margin: 0 0 8px;
+    }
+    .type-card p {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--cocoa);
+      margin: 0;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 14px;
+    }
+    .feature-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 14px;
+      align-items: start;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .feature-list li::before {
+      content: "—";
+      color: var(--cherry);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .galeria-mini {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .galeria-mini img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="top-note">Encomendas artesanais em Lisboa e Margem Sul <em>·</em> caixas, bolos e mesas doces</div>
+
+    <header>
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="brand" href="index.html" aria-label="Casa Clo">
+          <strong>Casa <em>Clo</em></strong>
+          <span>A doçaria da Clo</span>
+        </a>
+        <div class="menu" id="menu">
+          <a href="index.html#loja">Loja</a>
+          <a href="eventos.html" aria-current="page">Eventos</a>
+          <a href="pecas.html">Peças especiais</a>
+          <a href="clo.html">A Clo</a>
+          <a href="index.html#contactos">Contactos</a>
+          <a class="cart-pill" href="index.html#contactos">Encomendar</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="section split" style="padding-top: 80px;">
+        <div class="text-block">
+          <div class="eyebrow">Eventos e mesas doces</div>
+          <h2 style="font-size: 42px; line-height: 1.1;">Uma mesa doce, pensada para a ocasião.</h2>
+          <p style="font-size: 18px; line-height: 1.55;">
+            Para casamentos, baptizados, comunhões, aniversários e festas privadas — a Casa Clo prepara
+            mesas doces feitas à medida da celebração: das peças e cores ao número de convidados, ao
+            transporte e à montagem.
+          </p>
+          <p style="font-size: 18px; line-height: 1.55;">
+            Cada evento começa numa boa conversa.
+          </p>
+          <a class="button primary" href="index.html#contactos" style="margin-top: 8px;">Pedir orçamento</a>
+        </div>
+        <div class="image-frame">
+          <img src="images/img-10.jpg" alt="Mesa doce para evento com doces personalizados">
+        </div>
+      </section>
+
+      <!-- TIPOS DE EVENTO -->
+      <section class="section" style="background: var(--paper);">
+        <div style="width: min(1100px, calc(100% - 36px)); margin: 0 auto;">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">Para que ocasiões</div>
+              <h2>Cinco celebrações que conhecemos bem.</h2>
+            </div>
+            <p>
+              Cada uma com a sua exigência própria — e cada uma merecedora de uma mesa pensada à medida.
+            </p>
+          </div>
+
+          <div class="types-grid">
+            <article class="type-card">
+              <h3>Casamentos</h3>
+              <p>Mesas doces que dialogam com a paleta da decoração e a cerimónia do dia.</p>
+            </article>
+            <article class="type-card">
+              <h3>Baptizados e comunhões</h3>
+              <p>Doces delicados, com cores suaves, monogramas e detalhes para o dia da família.</p>
+            </article>
+            <article class="type-card">
+              <h3>Aniversários</h3>
+              <p>De um número redondo a uma surpresa íntima — um bolo central, uma mesa, ou as duas coisas.</p>
+            </article>
+            <article class="type-card">
+              <h3>Festas privadas</h3>
+              <p>Almoços, jantares, recepções em casa: doçaria que acompanha a forma de receber de cada um.</p>
+            </article>
+            <article class="type-card">
+              <h3>Outras datas</h3>
+              <p>Despedidas, brindes, datas marcadas — fale connosco para perceber o que faz sentido.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- O QUE INCLUI -->
+      <section class="section split reverse">
+        <div class="image-frame small">
+          <img src="images/img-11.jpg" alt="Doces de evento com monograma">
+        </div>
+        <div class="text-block">
+          <div class="eyebrow">O que inclui uma mesa da Clo</div>
+          <h2>Mais do que doces — uma mesa que se serve.</h2>
+          <p>
+            Cada proposta é feita à medida, mas, em regra, uma mesa da Casa Clo combina os seguintes elementos:
+          </p>
+          <ul class="feature-list">
+            <li>Selecção de doces variados (peças individuais, bolos, sobremesas), em quantidade ajustada ao número de convidados.</li>
+            <li>Personalização cromática e gráfica — paletas, monogramas, etiquetas, embalagens.</li>
+            <li>Suportes e travessas próprios (taças, andares, bandejas).</li>
+            <li>Transporte cuidado para o local da celebração.</li>
+            <li>Montagem da mesa no local, pensada como cenário visual.</li>
+            <li>Recolha após o evento, sempre que aplicável.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PERSONALIZAÇÃO -->
+      <section class="section quote-card">
+        <div>
+          <div class="eyebrow">Personalização</div>
+          <h2>Tudo se afina ao detalhe da ocasião.</h2>
+          <p>
+            Cada elemento da mesa pode ser ajustado: paletas de cor coordenadas com a decoração,
+            monogramas com as iniciais dos noivos ou do aniversariante, formatos especiais, peças
+            de chocolate moldadas à mão.
+          </p>
+        </div>
+        <div class="quote-list" aria-label="Possibilidades de personalização">
+          <div>Paletas cromáticas coordenadas</div>
+          <div>Monogramas com iniciais</div>
+          <div>Etiquetas e embalagens próprias</div>
+          <div>Peças de chocolate moldadas à mão</div>
+          <div>Bolo central temático</div>
+          <div>Doces individuais para oferecer</div>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section class="section process">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Como funciona</div>
+            <h2>Cinco passos, do briefing ao fim do evento.</h2>
+          </div>
+          <p>O processo é simples — mas com tempo suficiente para fazer cada coisa bem feita.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span>1</span>
+            <h3>Conversa</h3>
+            <p>Conta-nos a data, o local, o número de convidados, o estilo da celebração.</p>
+          </article>
+          <article class="step">
+            <span>2</span>
+            <h3>Proposta</h3>
+            <p>Enviamos uma proposta com selecção de doces, personalização e orçamento.</p>
+          </article>
+          <article class="step">
+            <span>3</span>
+            <h3>Confirmação</h3>
+            <p>Confirmação com sinal e detalhes finais (paleta, monograma, suportes).</p>
+          </article>
+          <article class="step">
+            <span>4</span>
+            <h3>Preparação</h3>
+            <p>Tudo é preparado à mão, com o tempo exigido por cada peça.</p>
+          </article>
+          <article class="step">
+            <span>5</span>
+            <h3>Montagem</h3>
+            <p>Transporte e montagem no local — a mesa fica pronta antes do convidado chegar.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ANTECEDÊNCIA -->
+      <section class="section split">
+        <div class="text-block">
+          <div class="eyebrow">Tempo de antecedência</div>
+          <h2>Quanto antes, melhor — sobretudo para datas cheias.</h2>
+          <p>
+            Para um evento ser preparado com calma, recomendamos uma antecedência mínima de
+            <strong>4 a 6 semanas</strong>* — sobretudo em meses de mais procura
+            (Maio a Setembro, Dezembro).
+          </p>
+          <p>
+            Para casamentos, idealmente <strong>2 a 3 meses</strong>*. Para encomendas com peças
+            muito personalizadas, podemos precisar de mais tempo — falamos sobre isso no momento da proposta.
+          </p>
+          <p style="font-size: 13px; color: var(--cocoa); font-style: italic; margin-top: 24px;">
+            * Prazos indicativos a confirmar pela Clo.
+          </p>
+        </div>
+        <div class="image-frame">
+          <img src="images/img-15.jpg" alt="Doces com rosas cor-de-rosa">
+        </div>
+      </section>
+
+      <!-- GALERIA MINI -->
+      <section class="section">
+        <div style="width: min(1100px, calc(100% - 36px)); margin: 0 auto;">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">Algumas peças</div>
+              <h2>Detalhes que já passaram por mesas da Clo.</h2>
+            </div>
+          </div>
+          <div class="galeria-mini">
+            <img src="images/img-03.jpg" alt="Doces personalizados com monograma">
+            <img src="images/img-08.jpg" alt="Doces com monograma em prata">
+            <img src="images/img-16.jpg" alt="Detalhe de doces com monograma">
+            <img src="images/img-06.jpg" alt="Doces com flores cor-de-rosa">
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section newsletter" style="padding-top: 60px;">
+        <div>
+          <div class="eyebrow">Próximo passo</div>
+          <h2>Vamos preparar a mesa do seu dia?</h2>
+          <p>
+            Conte-nos a data e o que tem em mente. A Clo responde com calma, em 24-48h, com uma primeira
+            proposta para começarmos a desenhar a mesa.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+            <a class="button primary" href="index.html#contactos">Pedir orçamento</a>
+            <a class="button" href="https://wa.me/351966845351" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Casa Clo</div>
+          <p>A doçaria da Clo.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Encomendas</h4>
+          <p>Lisboa e Margem Sul</p>
+          <p>Produtos por pré-encomenda</p>
+          <p>Eventos e peças especiais sob orçamento</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="mailto:encomendas@casaclo.pt">encomendas@casaclo.pt</a>
+          <a href="https://instagram.com/casaclo" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/351966845351" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Casa Clo. Todos os direitos reservados.</span>
+        <div class="footer-legal">
+          <a href="termos.html">Termos e condições</a>
+          <a href="privacidade.html">Privacidade</a>
+          <a href="info-alimentar.html">Informação alimentar</a>
+          <a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener">Livro de reclamações</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

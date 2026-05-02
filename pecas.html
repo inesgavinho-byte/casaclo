@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peças especiais — Casa Clo</title>
+  <meta name="description" content="Peças de chocolate, doces personalizados, monogramas e formatos especiais — o detalhe que transforma um doce em memória.">
+
+  <meta property="og:title" content="Peças especiais — Casa Clo">
+  <meta property="og:description" content="O detalhe que transforma um doce em memória.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/img-08.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=Italiana&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .pieces-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+    .piece-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(42, 24, 19, 0.06);
+      display: flex;
+      flex-direction: column;
+    }
+    .piece-card .piece-image {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--mist);
+    }
+    .piece-card .piece-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .piece-card:hover .piece-image img {
+      transform: scale(1.04);
+    }
+    .piece-card .piece-body {
+      padding: 18px 20px 22px;
+    }
+    .piece-card h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0 0 8px;
+    }
+    .piece-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--cocoa);
+      margin: 0;
+    }
+
+    .ocasioes-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 14px;
+    }
+    .ocasioes-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 14px;
+      align-items: start;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .ocasioes-list li::before {
+      content: "—";
+      color: var(--cherry);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="top-note">Encomendas artesanais em Lisboa e Margem Sul <em>·</em> caixas, bolos e mesas doces</div>
+
+    <header>
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="brand" href="index.html" aria-label="Casa Clo">
+          <strong>Casa <em>Clo</em></strong>
+          <span>A doçaria da Clo</span>
+        </a>
+        <div class="menu" id="menu">
+          <a href="index.html#loja">Loja</a>
+          <a href="eventos.html">Eventos</a>
+          <a href="pecas.html" aria-current="page">Peças especiais</a>
+          <a href="clo.html">A Clo</a>
+          <a href="index.html#contactos">Contactos</a>
+          <a class="cart-pill" href="index.html#contactos">Encomendar</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="section split reverse" style="padding-top: 80px;">
+        <div class="image-frame">
+          <img src="images/img-08.jpg" alt="Doces personalizados com monograma">
+        </div>
+        <div class="text-block">
+          <div class="eyebrow">Peças especiais</div>
+          <h2 style="font-size: 42px; line-height: 1.1;">O detalhe que transforma um doce em memória.</h2>
+          <p style="font-size: 18px; line-height: 1.55;">
+            Para além das caixas e dos bolos, a Clo prepara peças mais difíceis: figuras de chocolate
+            moldadas à mão, monogramas com iniciais, paletas de cor coordenadas com a celebração,
+            e pequenos formatos pensados para surpreender quem recebe.
+          </p>
+          <p style="font-size: 18px; line-height: 1.55;">
+            São o tipo de peças que se guardam na memória — e, muitas vezes, em fotografias.
+          </p>
+          <a class="button primary" href="index.html#contactos" style="margin-top: 8px;">Pedir uma peça</a>
+        </div>
+      </section>
+
+      <!-- TIPOS DE PEÇAS -->
+      <section class="section" style="background: var(--paper);">
+        <div style="width: min(1100px, calc(100% - 36px)); margin: 0 auto;">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">O que pode ser uma peça especial</div>
+              <h2>Quatro famílias de peças que já saem da cozinha da Clo.</h2>
+            </div>
+            <p>
+              Cada uma delas pode adaptar-se ao tema, à ocasião ou simplesmente a um gosto.
+            </p>
+          </div>
+
+          <div class="pieces-grid">
+
+            <article class="piece-card">
+              <div class="piece-image">
+                <img src="images/img-07.jpg" alt="Peças de chocolate moldadas">
+              </div>
+              <div class="piece-body">
+                <h3>Figuras de chocolate</h3>
+                <p>Ursos, animais, pequenas peças moldadas à mão em chocolate de cobertura — para festas, lembranças ou para oferecer.</p>
+              </div>
+            </article>
+
+            <article class="piece-card">
+              <div class="piece-image">
+                <img src="images/img-16.jpg" alt="Doces com monograma">
+              </div>
+              <div class="piece-body">
+                <h3>Doces com monograma</h3>
+                <p>Macarons, bombons, biscoitos e pequenos doces personalizados com iniciais — dos noivos, do aniversariante, da família.</p>
+              </div>
+            </article>
+
+            <article class="piece-card">
+              <div class="piece-image">
+                <img src="images/img-06.jpg" alt="Doces delicados com flores cor-de-rosa">
+              </div>
+              <div class="piece-body">
+                <h3>Paletas coordenadas</h3>
+                <p>Selecções de doces afinadas à cor da celebração: tons rosa, champanhe, prata, terracotta — ou uma paleta nossa, à medida.</p>
+              </div>
+            </article>
+
+            <article class="piece-card">
+              <div class="piece-image">
+                <img src="images/img-14.jpg" alt="Peças delicadas em taça prateada">
+              </div>
+              <div class="piece-body">
+                <h3>Formatos especiais</h3>
+                <p>Mini-bolos individuais, peças para suporte de andares, formatos invulgares para surpreender — pensados em conjunto.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO SE FAZ -->
+      <section class="section split">
+        <div class="text-block">
+          <div class="eyebrow">Como se fazem</div>
+          <h2>À mão, com tempo, com método.</h2>
+          <p>
+            Uma peça especial não se improvisa. Cada figura de chocolate passa por temperar, moldar,
+            arrefecer e desmoldar com o cuidado de quem sabe que a textura final depende de cada
+            etapa. Cada monograma é desenhado, replicado, repetido até ficar igual — porque é a
+            consistência que faz a peça parecer feita por mão profissional.
+          </p>
+          <p>
+            É por isso que pedimos sempre tempo. As peças mais simples saem em poucos dias; as mais
+            complexas, com paletas e formatos novos, precisam de mais.
+          </p>
+        </div>
+        <div class="image-frame">
+          <img src="images/img-13.jpg" alt="Doces de chocolate em taça de vidro">
+        </div>
+      </section>
+
+      <!-- QUANDO FAZ SENTIDO -->
+      <section class="section quote-card">
+        <div>
+          <div class="eyebrow">Quando faz sentido</div>
+          <h2>Pedir uma peça especial é pedir um momento.</h2>
+          <p>
+            Há ocasiões em que um bolo bom não chega — pede-se uma peça que se lembre, se fotografe,
+            se ofereça com nome.
+          </p>
+        </div>
+        <ul class="ocasioes-list">
+          <li>Como <strong>presente</strong> com significado — visitas, agradecimentos, datas pessoais.</li>
+          <li>Como <strong>peça central</strong> de uma mesa doce ou de uma festa.</li>
+          <li>Como <strong>lembrança</strong> para os convidados levarem para casa.</li>
+          <li>Como <strong>surpresa</strong> num jantar, num pedido, numa data marcada.</li>
+        </ul>
+      </section>
+
+      <!-- ANTECEDÊNCIA / PROCESSO RÁPIDO -->
+      <section class="section split reverse">
+        <div class="image-frame small">
+          <img src="images/img-04.jpg" alt="Doces artesanais em taça prateada">
+        </div>
+        <div class="text-block">
+          <div class="eyebrow">Como pedir</div>
+          <h2>Comece por contar o que tem em mente.</h2>
+          <p>
+            Não há um catálogo fechado de peças especiais. O melhor é descrever a ocasião — quem é,
+            quando é, qual é o tom da celebração — e deixar a Clo propor.
+          </p>
+          <p>
+            Para peças simples, pedimos um mínimo de <strong>2 semanas</strong>* de antecedência.
+            Para peças com personalização ou em maior quantidade, recomendamos <strong>3 a 4 semanas</strong>*.
+          </p>
+          <p style="font-size: 13px; color: var(--cocoa); font-style: italic; margin-top: 18px;">
+            * Prazos indicativos a confirmar pela Clo.
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section newsletter" style="padding-top: 60px;">
+        <div>
+          <div class="eyebrow">Próximo passo</div>
+          <h2>Tem uma peça em mente?</h2>
+          <p>
+            Conte à Clo o que está a celebrar e o que imagina — e ela ajuda a desenhar a peça certa.
+          </p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+            <a class="button primary" href="index.html#contactos">Pedir uma peça especial</a>
+            <a class="button" href="https://wa.me/351966845351" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Casa Clo</div>
+          <p>A doçaria da Clo.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Encomendas</h4>
+          <p>Lisboa e Margem Sul</p>
+          <p>Produtos por pré-encomenda</p>
+          <p>Eventos e peças especiais sob orçamento</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="mailto:encomendas@casaclo.pt">encomendas@casaclo.pt</a>
+          <a href="https://instagram.com/casaclo" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/351966845351" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Casa Clo. Todos os direitos reservados.</span>
+        <div class="footer-legal">
+          <a href="termos.html">Termos e condições</a>
+          <a href="privacidade.html">Privacidade</a>
+          <a href="info-alimentar.html">Informação alimentar</a>
+          <a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener">Livro de reclamações</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
