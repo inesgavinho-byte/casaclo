@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja — Casa Clo</title>
+  <meta name="description" content="A Coleção Casa Clo. Quinze bolos e peças por encomenda, organizados por momento — para casa, para celebrar e para cerimónia.">
+
+  <meta property="og:title" content="Loja — Casa Clo">
+  <meta property="og:description" content="Doces de casa, feitos com cerimónia. A coleção completa.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="images/og-image.jpg">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Layout específico da loja */
+    .collection-intro {
+      width: min(820px, calc(100% - 36px));
+      margin: 64px auto 80px;
+      text-align: center;
+    }
+    .collection-intro h1 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.05;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin: 16px 0 22px;
+    }
+    .collection-intro h1 em {
+      color: var(--cherry);
+      font-style: italic;
+    }
+    .collection-intro p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--cocoa);
+    }
+    .collection-intro .ornament {
+      font-family: var(--serif);
+      color: var(--cherry);
+      font-style: italic;
+      font-size: 22px;
+      letter-spacing: 0.4em;
+      margin-bottom: 6px;
+    }
+
+    .collection-block {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto 96px;
+    }
+    .collection-block > .block-header {
+      text-align: center;
+      margin-bottom: 56px;
+      padding-top: 24px;
+    }
+    .collection-block > .block-header .eyebrow {
+      color: var(--cherry);
+    }
+    .collection-block > .block-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.5vw, 38px);
+      line-height: 1.15;
+      font-weight: 400;
+      margin: 8px 0 14px;
+    }
+    .collection-block > .block-header p {
+      max-width: 560px;
+      margin: 0 auto;
+      color: var(--cocoa);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .sub-collection {
+      margin-bottom: 56px;
+    }
+    .sub-collection-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 18px;
+      margin-bottom: 28px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(42, 24, 19, 0.08);
+    }
+    .sub-collection-heading .num {
+      font-family: var(--serif);
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      color: var(--cherry);
+    }
+    .sub-collection-heading h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      margin: 0;
+      letter-spacing: -0.005em;
+    }
+    .sub-collection-heading .meta {
+      margin-left: auto;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cocoa);
+    }
+
+    /* Essência Casa Clo */
+    .essence {
+      background: var(--paper);
+      border-radius: var(--radius);
+      padding: clamp(40px, 6vw, 72px);
+      margin-bottom: 96px;
+    }
+    .essence h2 {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 400;
+      text-align: center;
+      margin: 0 0 8px;
+    }
+    .essence > p.lead {
+      text-align: center;
+      color: var(--cocoa);
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto 48px;
+    }
+    .essence-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+    .essence-item {
+      text-align: center;
+    }
+    .essence-item .symbol {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid var(--cherry);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--cherry);
+      font-size: 22px;
+    }
+    .essence-item h4 {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
+    .essence-item p {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--cocoa);
+      margin: 0;
+    }
+    @media (max-width: 700px) {
+      .essence-grid { grid-template-columns: 1fr; gap: 32px; }
+      .sub-collection-heading { flex-wrap: wrap; }
+      .sub-collection-heading .meta { margin-left: 0; flex-basis: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="top-note">Encomendas artesanais em Lisboa e Margem Sul <em>·</em> caixas, bolos e mesas doces</div>
+
+    <header>
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="brand" href="index.html" aria-label="Casa Clo">
+          <strong>Casa <em>Clo</em></strong>
+          <span>A doçaria da Clo</span>
+        </a>
+        <div class="menu" id="menu">
+          <a href="loja.html" aria-current="page">Loja</a>
+          <a href="eventos.html">Eventos</a>
+          <a href="pecas.html">Peças especiais</a>
+          <a href="clo.html">A Clo</a>
+          <a href="index.html#contactos">Contactos</a>
+          <a class="cart-pill" href="index.html#contactos">Encomendar</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO da Coleção -->
+      <section class="collection-intro">
+        <div class="ornament">·  ·  ·</div>
+        <div class="eyebrow">Coleção Casa Clo</div>
+        <h1>Doces de casa, <em>feitos com cerimónia.</em></h1>
+        <p>
+          Dezoito peças, organizadas por momento. Da mesa de domingo à cerimónia de assinatura,
+          passando pela festa de criança ou pela peça mais lúdica. Cada bolo segue a direcção
+          certa para o que se está a celebrar.
+        </p>
+      </section>
+
+      <!-- ============================================================
+           PARA CASA
+           ============================================================ -->
+      <section class="collection-block">
+        <div class="block-header">
+          <div class="eyebrow">Para casa</div>
+          <h2>O dia-a-dia, com cuidado.</h2>
+          <p>Bolos para a mesa de família e pequenos doces para oferecer. Pão da casa, presentes, rituais de fim-de-semana.</p>
+        </div>
+
+        <!-- 01. Linha Casa -->
+        <div class="sub-collection">
+          <div class="sub-collection-heading">
+            <span class="num">01</span><h3>Linha Casa</h3><span class="meta">Core semanal</span>
+          </div>
+          <div class="product-grid">
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-casa-clo.jpg" alt="Bolo Casa Clo — cilindro creme com textura orgânica e espiral no topo"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Linha Casa</span><span class="tag">Semanal</span></div>
+                <h3>Bolo Casa Clo</h3>
+                <p>Cilindro perfeito, buttercream com textura orgânica. O pão da casa: sabor que muda todas as semanas.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-creme-fruta.jpg" alt="Bolo Creme & Fruta com figos, uvas, framboesas e mirtilos"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Linha Casa</span><span class="tag">De estação</span></div>
+                <h3>Bolo Creme &amp; Fruta</h3>
+                <p>Creme suave de baunilha sob fruta fresca da estação — figos, framboesa, uva. Composição natural, nunca perfeita.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image placeholder"><span>Visual em preparação</span></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Linha Casa</span><span class="tag">Minimal</span></div>
+                <h3>Bolo Luz de Domingo</h3>
+                <p>Creme liso com um único gesto: uma onda, uma dobra, uma linha. Minimal absoluto.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-chocolate-casa.jpg" alt="Bolo Chocolate Casa — cilindro com ganache rica e textura orgânica"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Linha Casa</span><span class="tag">Família</span></div>
+                <h3>Bolo Chocolate Casa</h3>
+                <p>Mesmo cilindro, ganache profunda. O chocolate da casa — para a mesa de família, em qualquer dia.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- 02. Pequenos Rituais -->
+        <div class="sub-collection">
+          <div class="sub-collection-heading">
+            <span class="num">02</span><h3>Pequenos Rituais</h3><span class="meta">Presentes</span>
+          </div>
+          <div class="product-grid">
+
+            <article class="product-card">
+              <div class="product-image placeholder"><span>Visual em preparação</span></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Presente</span><span class="tag">Individual</span></div>
+                <h3>Mini Bolos</h3>
+                <p>Pequenas cúpulas com base branca e um detalhe pontual: uma flor, uma folha, um traço dourado.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image placeholder"><span>Visual em preparação</span></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Presente</span><span class="tag">Cake pop</span></div>
+                <h3>Cake Pops Clo</h3>
+                <p>Brancos, com pérolas muito finas. Layout de joalharia, sem excessos.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/img-09.jpg" alt="Caixa para Oferecer da Casa Clo"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Presente</span><span class="tag">Embalada</span></div>
+                <h3>Caixa para Oferecer</h3>
+                <p>Selecção de mini bolos, doces e bombons em embalagem cuidada. Pensada para surpreender.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PARA CELEBRAR
+           ============================================================ -->
+      <section class="collection-block" style="background: var(--paper); border-radius: var(--radius); padding: 56px clamp(20px, 4vw, 56px);">
+        <div class="block-header">
+          <div class="eyebrow">Para celebrar</div>
+          <h2>Os dias que se guardam.</h2>
+          <p>Aniversários discretos, baptizados, festas privadas. Bolos pensados para integrar uma mesa, com a ternura da infância e o cuidado das celebrações maiores.</p>
+        </div>
+
+        <!-- 03. Infância -->
+        <div class="sub-collection">
+          <div class="sub-collection-heading">
+            <span class="num">03</span><h3>Infância</h3><span class="meta">Aniversários delicados</span>
+          </div>
+          <div class="product-grid">
+
+            <article class="product-card">
+              <div class="product-image placeholder"><span>Visual em preparação</span></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Infância</span><span class="tag">Aniversário</span></div>
+                <h3>Bolo Pequenos Gestos</h3>
+                <p>Base creme texturada com pequenos relevos: corações, formas suaves. Muito espaço entre elementos.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-ursinho-clo.jpg" alt="Bolo Ursinho Clo — base creme com topper de urso pequeno, vela fina e laço discreto"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Infância</span><span class="tag">Criança</span></div>
+                <h3>Bolo Ursinho Clo</h3>
+                <p>Base minimal com um topper discreto: um pequeno urso, uma vela fina. Infantil elegante, sem kitsch.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-pes-bebe.jpg" alt="Bolo Primeiros Anos com pézinhos esculpidos"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Infância</span><span class="tag">Bebé</span></div>
+                <h3>Bolo Primeiros Anos</h3>
+                <p>Muito limpo. Um único símbolo: uns pézinhos, uma inicial, um detalhe. Paleta neutra.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- 04. Infantil Clássico -->
+        <div class="sub-collection">
+          <div class="sub-collection-heading">
+            <span class="num">04</span><h3>Infantil Clássico</h3><span class="meta">Tema · Personagem · Festa</span>
+          </div>
+          <div class="product-grid">
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-ursinho-festa.jpg" alt="Bolo Ursinho Festa — urso esculpido em fondant com coelho e chapéu de festa"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Infantil</span><span class="tag">Personagem</span></div>
+                <h3>Bolo Ursinho Festa</h3>
+                <p>Urso esculpido em fondant com chapéu de festa e amigo a acompanhar. Para festas onde a criança quer protagonismo.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-tema-animais.jpg" alt="Bolo Urso — modelado em buttercream texturado, paleta beige"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Infantil</span><span class="tag">Urso</span></div>
+                <h3>Bolo Urso</h3>
+                <p>Urso modelado em buttercream texturado, em tons castanho e baunilha. Sem cores saturadas, sem chapéus de festa.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-coelho.jpg" alt="Bolo Coelho — orelhas longas em fondant e focinho rosa"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Infantil</span><span class="tag">Coelho</span></div>
+                <h3>Bolo Coelho</h3>
+                <p>Coelho com orelhas longas e focinho discreto, em tons creme. Para festas de primavera, baptizados ou para os mais pequenos.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image placeholder"><span>Visual em preparação</span></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Infantil</span><span class="tag">À medida</span></div>
+                <h3>Bolo à Medida da Criança</h3>
+                <p>Personagem favorita, hobby, cor preferida. Conte-nos a história — a Clo desenha o bolo.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- 05. Celebrar -->
+        <div class="sub-collection" style="margin-bottom: 0;">
+          <div class="sub-collection-heading">
+            <span class="num">05</span><h3>Celebrar</h3><span class="meta">Eventos e encomendas</span>
+          </div>
+          <div class="product-grid">
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/img-10.jpg" alt="Bolo Mesa Clo numa mesa doce"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Celebrar</span><span class="tag">Mesa doce</span></div>
+                <h3>Bolo Mesa Clo</h3>
+                <p>Estrutura simples, pensada para integrar numa mesa doce. Fruta, flores suaves ou chocolate.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Orçamento</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-natural.jpg" alt="Bolo Natural — naked cake com flores comestíveis e folhagem"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Celebrar</span><span class="tag">Natural</span></div>
+                <h3>Bolo Natural</h3>
+                <p>Folhas, ervas, flores muito leves. Composição assimétrica, vegetação a respirar.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Orçamento</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-floral-suave.jpg" alt="Bolo Floral Suave — flores cor-de-rosa pálido em cascata, com abelhas em chocolate"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Celebrar</span><span class="tag">Floral</span></div>
+                <h3>Bolo Floral Suave</h3>
+                <p>Flores com presença, mas controladas. Integradas no bolo, em tons neutros.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Orçamento</a></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           PEÇAS ESPECIAIS — Cerimónia
+           ============================================================ -->
+      <section class="collection-block">
+        <div class="block-header">
+          <div class="eyebrow">Peças especiais</div>
+          <h2>Cerimónia.</h2>
+          <p>Os bolos de assinatura. Peças escultóricas, monocromáticas, com a contenção que transforma um bolo em objecto de cerimónia.</p>
+        </div>
+
+        <div class="sub-collection" style="margin-bottom: 0;">
+          <div class="sub-collection-heading">
+            <span class="num">06</span><h3>Cerimónia</h3><span class="meta">Assinatura · Luxo</span>
+          </div>
+          <div class="product-grid">
+
+            <article class="product-card">
+              <div class="product-image placeholder"><span>Visual em preparação</span></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Cerimónia</span><span class="tag">Escultura</span></div>
+                <h3>Bolo Escultura Clo</h3>
+                <p>Andares desalinhados, geometria limpa, linhas esculpidas na superfície.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Orçamento</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/bolo-casamento.jpg" alt="Bolo Branco Total — relevo floral em monocromia"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Cerimónia</span><span class="tag">Branco</span></div>
+                <h3>Bolo Branco Total</h3>
+                <p>Branco sobre branco. Relevos florais, padrões, texturas — muito detalhe, zero cor.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Orçamento</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image placeholder"><span>Visual em preparação</span></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Cerimónia</span><span class="tag">Assinatura</span></div>
+                <h3>Bolo Silêncio</h3>
+                <p>Forma perfeita. Um único gesto. Muito espaço vazio. A peça mais sofisticada da marca.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Orçamento</a></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           ÉPOCAS FESTIVAS — Sazonais (07)
+           ============================================================ -->
+      <section class="collection-block">
+        <div class="block-header">
+          <div class="eyebrow">Épocas festivas</div>
+          <h2>Para as datas do calendário.</h2>
+          <p>Peças sazonais — Natal, Páscoa, datas marcantes do ano. Fora da coleção permanente, com a mesma direcção: contidas, naturais, com cuidado.</p>
+        </div>
+
+        <div class="sub-collection" style="margin-bottom: 0;">
+          <div class="sub-collection-heading">
+            <span class="num">07</span><h3>Sazonais</h3><span class="meta">Natal · Páscoa · Datas</span>
+          </div>
+          <div class="product-grid">
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/suspiros-casa-clo.jpg" alt="Suspiros Casa Clo — pequenos suspiros brancos em forma de gota"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Sazonal</span><span class="tag">Festa</span></div>
+                <h3>Suspiros Casa Clo</h3>
+                <p>Pequenos suspiros em forma de gota, leves e crocantes. Para mesas de festa, prendas de Natal ou para acompanhar um café.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/pinheiros-natal.jpg" alt="Pinheiros de Natal em merengue branco"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Natal</span><span class="tag">Mesa</span></div>
+                <h3>Pinheiros de Natal</h3>
+                <p>Pinheiros em merengue branco, modelados à mão. Para a mesa de Natal — sozinhos como peça central ou em conjunto.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image"><img src="images/pinhas-chocolate.jpg" alt="Pinhas em chocolate moldado com toque de pó de açúcar"></div>
+              <div class="product-body">
+                <div class="product-topline"><span>Natal</span><span class="tag">Chocolate</span></div>
+                <h3>Pinhas de Chocolate</h3>
+                <p>Pinhas inteiras moldadas em chocolate, com toque de pó de açúcar. Decoração e doce em peça única.</p>
+                <div class="product-meta"><span class="price">Sob encomenda</span><a class="mini-button" href="index.html#contactos">Encomendar</a></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- A ESSÊNCIA CASA CLO -->
+      <section class="essence" style="width: min(1180px, calc(100% - 36px)); margin-left: auto; margin-right: auto;">
+        <div class="eyebrow" style="text-align: center;">A essência</div>
+        <h2>Casa Clo</h2>
+        <p class="lead">Três princípios atravessam toda a coleção.</p>
+
+        <div class="essence-grid">
+          <div class="essence-item">
+            <div class="symbol">·</div>
+            <h4>Simples</h4>
+            <p>Menos é mais. Cada detalhe tem um propósito.</p>
+          </div>
+          <div class="essence-item">
+            <div class="symbol">~</div>
+            <h4>Natural</h4>
+            <p>Ingredientes de verdade, beleza que vem da natureza.</p>
+          </div>
+          <div class="essence-item">
+            <div class="symbol">♡</div>
+            <h4>Afetivo</h4>
+            <p>Feitos para celebrar o que realmente importa.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section newsletter">
+        <div>
+          <div class="eyebrow">Encomendas personalizadas</div>
+          <h2>Algo à medida?</h2>
+          <p>Para temas, paletas ou formatos fora desta colecção, conte à Clo o que tem em mente. Todas as peças são preparadas por encomenda, em Lisboa e Margem Sul.</p>
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 18px;">
+            <a class="button primary" href="index.html#contactos">Pedir orçamento</a>
+            <a class="button" href="https://wa.me/351966845351" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Casa Clo</div>
+          <p>A doçaria da Clo.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Encomendas</h4>
+          <p>Lisboa e Margem Sul</p>
+          <p>Produtos por pré-encomenda</p>
+          <p>Eventos e peças especiais sob orçamento</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="mailto:encomendas@casaclo.pt">encomendas@casaclo.pt</a>
+          <a href="https://instagram.com/casaclo" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/351966845351" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Casa Clo. Todos os direitos reservados.</span>
+        <div class="footer-legal">
+          <a href="termos.html">Termos e condições</a>
+          <a href="privacidade.html">Privacidade</a>
+          <a href="info-alimentar.html">Informação alimentar</a>
+          <a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener">Livro de reclamações</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
